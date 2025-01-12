@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاگ شخصی من</title>
+    <style>
+        #head {
+            width: 100%;
+            height: 15%;
+            margin-top: 40px;
+            background: linear-gradient(lightblue, pink);
+            box-shadow: 0 2px 2px 4px rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), .2);
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .card {
+            width: 80px;
+            height: 150px;
+            margin: 20px;
+            background: hotpink;
+            box-shadow: 2px 2px 4px 6px rgba(0, 0, 0, .2);
+            border-radius: 20px;
+            color: rgb(0, 0, 71);
+            text-align: center;
+        }
+        #user{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">دوستان من</div>
+    <div id="user">
+        {% for i in contex %}
+        <div class="card">
+            <h3>{{i.name}}</h1>
+            <h4>{{i.age}}</h3>
+            <h5>{{i.gen}}</h6>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
